@@ -21,7 +21,7 @@ public class HelloWorldUser {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         // 3. Create components and put them in the frame
-        JLabel label1 = new JLabel("Hello World!");
+        JLabel label1 = new JLabel("Please Enter Your Name:");
         frame.add(label1);
 
         JTextField field1 = new JTextField(10);
@@ -30,9 +30,12 @@ public class HelloWorldUser {
         JButton button1 = new JButton("Click Here!");
         frame.add(button1);
 
+        JTextField field2 = new JTextField(10);
+        frame.add(field2);
+
         button1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent ae) {
-                field1.setText("Hi!");
+                field2.setText("Hi, " + field1.getText() + "!");
             }
         });
 

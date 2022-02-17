@@ -22,10 +22,22 @@ public class AnimalChooser {
 
         JButton button1 = new JButton("Red Panda");
         frame.add(button1, BorderLayout.SOUTH);
+        JButton button2 = new JButton("Seal");
+        frame.add(button2, BorderLayout.NORTH);
+        JButton button3 = new JButton("Hedgehog");
+        frame.add(button3, BorderLayout.EAST);
+        JButton button4 = new JButton("Dog");
+        frame.add(button4, BorderLayout.WEST);
 
         button1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent ae) {
                 ImageIcon icon = new ImageIcon("images/red_panda.jpg");
+                label1.setIcon(icon);
+            }
+        });
+        button2.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent ae) {
+                ImageIcon icon = new ImageIcon("images/seal.jpg");
                 label1.setIcon(icon);
             }
         });
